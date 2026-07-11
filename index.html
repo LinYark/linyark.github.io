@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Linyark</title>
+  <title>Linyark </title>
   
   <meta name="author" content="Linyark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,15 +25,19 @@
               </p>
               
               <p>
-                Hi, there, I'm a Optical Engineering Ph.D. student in <a href="https://www.hust.edu.cn/">HUST</a>, working with <a href="http://faculty.hust.edu.cn/zengshaoqun/zh_CN/index.htm">Prof. Shaoqun Zeng</a>.
-                  My real name is Fengchen He (何丰郴).
+                Hi, there, I'm LinYark. My real name is Fengchen He, 何丰郴. 
+                <br>
+                I am an Optical Engineering Ph.D. student in <a href="https://www.hust.edu.cn/">HUST</a>, working with <a href="http://faculty.hust.edu.cn/zengshaoqun/zh_CN/index.htm">Prof. Shaoqun Zeng</a>.
               </p>
 
               <p>
-                My research interest is to <strong>simulate the imaging process of optical lens to correct the downstream focusing task</strong>.
-                <a href="https://github.com/LinYark/Awesome_dualpixel_camera">Dual-Pixel</a> cameras are currently the focus of my research. 
-                Our team is exploring various possibilities for achieving high-resolution and large-field ophthalmic surgeries.
-              </p>
+                My research interest is to <strong>simulate the imaging process of cameras to correct the downstream CV task</strong>.
+                <br>
+                <a href="https://github.com/LinYark/Awesome_dualpixel_camera">Dual-Pixel</a> 
+                cameras are currently the focus of my research. 
+                <br>
+                <a href="https://github.com/EchoLighting">Our team</a>
+                is exploring a variety of implementations centered on camera simulation and downstream applications, including dual-pixel, bokeh, VLM.  </p>
 
               <p>
                 Passionate about the fields of programming, swimming, electronics, and photography. 
@@ -63,11 +67,12 @@
           <td style="padding:20px;width:100%;vertical-align:middle">
             <heading>News</heading>
             <p>
-              <li>07/2025: Our paper, <strong>"Simulating Dual-Pixel Images From Ray Tracing For Depth Estimation"</strong> is accepted by ICCV 2025. </li>
+              <li>07/2026: "FoundDP: Revisiting Weak Disparity Observability in Dual-Pixel Depth Estimation" is accepted by <strong>ECCV 2026</strong>. </li>
+              <li>07/2025: "Simulating Dual-Pixel Images From Ray Tracing For Depth Estimation" is accepted by <strong>ICCV 2025</strong>. </li>
               <li>03/2025: I have shared a ray-traced Dual-Pixel <a href="https://github.com/LinYark/Awesome_dualpixel_camera">simulator</a> detailing how to simulate realistic Dual-Pixel images.</li>
               <li>07/2024: I maintain a <a href="https://github.com/LinYark/Awesome_dualpixel_camera">repository</a> dedicated to awesome Dual-Pixel camera technology.</li>
-              <li>09/2023: I commenced my doctoral journey at HUST.</li>
-              <li>03/2022: I work as an Auto-Focus algorithm engineer at Xiaomi.</li>
+              <li>09/2023: I commenced my doctoral journey at HUST. Advisor Shaoqun Zeng.</li>
+              <li>03/2022: I worked as an Auto-Focus algorithm engineer at Xiaomi. PM Yongfu Song. Miss all my dear colleagues.</li>
             </p>
           </td>
         </tr>
@@ -102,7 +107,7 @@
                 I am conducting simulations of cameras and then applying them to various applications.
                 <li>Computational Dual-Pixel cameras.</li>
                 <li>Optical imaging system.</li>
-                <li>Depth est, deblur, and so on.</li>
+                <li>Depth est, deblur, bokeh and so on.</li>
               </p>
             </td>
           </tr>
@@ -111,6 +116,78 @@
 
         <!-- Publications -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <!-- ============================================================================== -->
+          <tr onmouseout="OABokeh_stop()" onmouseover="OABokeh_start()">
+            <td style="padding:20px;width:25%;vertical-align:top">
+              <div class="one">
+                <div class="two" id='OABokeh'><img src='my_images/2_vad_1.jpg'></div>
+                <img src='my_images/2_vad_0.jpg'>
+              </div>
+              <script type="text/javascript">
+                function OABokeh_start() {
+                  document.getElementById('OABokeh').style.opacity = "1";
+                }
+                function OABokeh_stop() {
+                  document.getElementById('OABokeh').style.opacity = "0";
+                }
+                OABokeh_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:top">
+                <!-- <a href="https://arxiv.org/abs/2607.01900">
+                  <papertitle>OABokeh: Occlusion-Aware Bokeh Rendering from 2.5D RGB</papertitle>
+                </a> -->
+                <papertitle>OABokeh: Occlusion-Aware Bokeh Rendering from 2.5D RGB</papertitle>
+              <br>
+              <b>Fengchen He</b>, <a href="https://singer-yang.github.io/"> Xinge Yang</a>, <a href="https://github.com/MorLin0825">Hao Xu</a>, <a href="http://github.com/zhaodayang">Dayang Zhao</a>, Shaoqun Zeng
+              <br>
+              <!-- <em>ECCV 2026. </b> <a href="https://arxiv.org/abs/2607.01900">Paper</a>, <a href="https://github.com/EchoLighting/FoundDP">Github</a>, Website </em>
+              <br> -->
+              <p></p>
+              <p>
+                <li>Models bokeh as visibility-modulated aperture integration from single 2.5D RGB.</li>
+                <li>Generates occlusion-truncated spatial-variant blur kernels to eliminate boundary artifacts.</li>
+                <li>Lightweight CNN acceleration achieves 25× speedup with slight fidelity loss.</li>
+              </p>
+            </td>
+          </tr>
+
+        <!-- ============================================================================== -->
+          <tr onmouseout="founddp_stop()" onmouseover="founddp_start()">
+            <td style="padding:20px;width:25%;vertical-align:top">
+              <div class="one">
+                <div class="two" id='founddp'><img src='my_images/1_founddp_1.jpg'></div>
+                <img src='my_images/1_founddp_0.jpg'>
+              </div>
+              <script type="text/javascript">
+                function founddp_start() {
+                  document.getElementById('founddp').style.opacity = "1";
+                }
+                function founddp_stop() {
+                  document.getElementById('founddp').style.opacity = "0";
+                }
+                founddp_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:top">
+                <a href="https://arxiv.org/abs/2607.01900">
+                  <papertitle>FoundDP: Revisiting Weak Disparity Observability in Dual-Pixel Depth Estimation</papertitle>
+                </a>
+              <br>
+              <b>Fengchen He</b>, <a href="https://github.com/MorLin0825">Hao Xu</a>, <a href="http://github.com/zhaodayang">Dayang Zhao</a>, Tingwei Quan, Shaoqun Zeng
+              <br>
+              <em>ECCV 2026. </b> <a href="https://arxiv.org/abs/2607.01900">Paper</a>, <a href="https://github.com/EchoLighting/FoundDP">Github</a>, Website </em>
+              <br>
+              <p></p>
+              <p>
+                <li>Integrates DP metric depth with foundation-model structural priors.</li>
+                <li>Aligns degraded ViT features for stable depth guidance.</li>
+                <li>Improves structure and accuracy in weak-disparity regions.</li>
+              </p>
+            </td>
+          </tr>
+
 
         <!-- ============================================================================== -->
           <tr onmouseout="Sdirt_stop()" onmouseover="Sdirt_start()">
@@ -134,9 +211,9 @@
                   <papertitle>Simulating Dual-Pixel Images From Ray Tracing For Depth Estimation</papertitle>
                 </a>
               <br>
-              <b>Fengchen He</b>, <a href="http://github.com/zhaodayang">Dayang Zhao, <a href="https://github.com/Immortallis1">Hao Xu</a>, <a href="http://faculty.hust.edu.cn/quantingwei/zh_CN/index.htm">Tingwei Quan</a>, <a href="http://faculty.hust.edu.cn/zengshaoqun/zh_CN/index.htm">Shaoqun Zeng</a>
+              <b>Fengchen He</b>, <a href="http://github.com/zhaodayang">Dayang Zhao</a>, <a href="https://github.com/MorLin0825">Hao Xu</a>, <a href="http://faculty.hust.edu.cn/quantingwei/zh_CN/index.htm">Tingwei Quan</a>, <a href="http://faculty.hust.edu.cn/zengshaoqun/zh_CN/index.htm">Shaoqun Zeng</a>
               <br>
-              <em>ICCV 2025. </b> <a href="https://arxiv.org/abs/2503.11213">Paper (Arxiv)</a>, <a href="papers/sdirt.pdf">Paper (PDF)</a>, <a href="https://github.com/LinYark/Sdirt">Github</a>, <a href="https://linyark.github.io/Sdirt/">Website</a> </em>
+              <em>ICCV 2025. </b> <a href="https://arxiv.org/abs/2503.11213">Paper </a>, <a href="https://github.com/LinYark/Sdirt">Github</a>, <a href="https://linyark.github.io/Sdirt/">Website</a> </em>
               <br>
               <p></p>
               <p>
@@ -167,6 +244,8 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:top">
                   <papertitle>Auto-Focus Algorithm</papertitle>
+              <br>
+              <b>PM</b> Yongfu Song, <b>PL</b> Xilei Cai, <b>Mentor</b> Yanhui Wang. Miss U.
               <br>
                 <p>
                   <li>Phase, contrast, ToF, and AI autofocus.</li>
@@ -200,7 +279,8 @@
               <br>
               <b>Fengchen He</b>, Mingyang Chen, Xiaoyu Chen, Jing Han, Lianfa Bai
               <br>
-              <a href="papers/siamdl.pdf">Paper</a>, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4209345">Preprint</a> in 2022s, <a href="https://github.com/LinYark/projects_in_master_period/tree/main/3article/siamdma">Github</a></em>
+              <!-- <a href="papers/siamdl.pdf">Paper</a>, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4209345">Preprint</a> in 2022s, <a href="https://github.com/LinYark/projects_in_master_period/tree/main/3article/siamdma">Github</a></em> -->
+              <a href="papers/siamdl.pdf">Paper</a>, <a href="https://github.com/LinYark/projects_in_master_period/tree/main/3article/siamdma">Github</a></em>
               <br>
                 <p>
                   <li>Cross-domain siamese attention updates templates with rich mode and time context.</li>
@@ -231,7 +311,7 @@
                   <papertitle>Autonomous Remote Strike System</papertitle>
                 </a>
               <br>
-               <a href="https://github.com/LinYark/projects_in_master_period/tree/main/2project">Intro repo</a>, based on Linux and Qt. Not a paper, just a project in 2021s.</em>
+               Based on Linux and Qt. Not a paper, just a project in 2021s.</em>
               <br>
               <em>System overview:</em>
               <br>
@@ -265,7 +345,7 @@
                   <papertitle>Automated Welding System</papertitle>
                 </a>
               <br>
-               <a href="https://github.com/LinYark/projects_in_master_period/tree/main/1project">Intro repo</a>, based on Linux and Qt. Not a paper, just a project in 2020s.</em>
+               Based on Linux and Qt. Not a paper, just a project in 2020s.</em>
               <br>
               <em>System overview:</em>
               <br>
